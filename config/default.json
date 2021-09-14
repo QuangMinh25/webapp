@@ -1,0 +1,3 @@
+{
+    "mongoURI":"mongodb+srv://admin:sapassword@zalochat.rdtj8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}
