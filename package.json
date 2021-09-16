@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/QuangMinh25/webapp#readme",
   "dependencies": {
+    "@joeattardi/emoji-button": "^4.6.0",
     "body-parser": "^1.19.0",
     "config": "^3.3.6",
     "cookie-parser": "^1.4.5",

@@ -2,9 +2,9 @@ const express = require('express')
 const connectDB = require('./config/db')
 const app = express()
 app.use(express.json())
-//ket noi csdl
-connectDB()
-
+//emoji
+     
+//////////////////////////////////
 app.set('view engine', 'ejs');
 app.set('views', './views');
 var bodyParser = require('body-parser');
@@ -32,8 +32,12 @@ app.use("/user", userRouter);
 var apiRouter = require("./api/home.api");
 app.use("/api", validateAuth, apiRouter);
 
+//ket noi database
+connectDB()
+
 const port = 3000
-app.listen(port,() => console.log(`Đang mở công tại http://localhost:${port}`))
+//ket noi server socketio va database
+server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:${port}`))
 
 var User = require("./model/user.model");
 var Friend = require("./model/friend.model");
@@ -132,5 +136,5 @@ function timArrayIdFriend( id, arr){
             arrayFriend.push(item._id);
         }
     })
-    return arrayFriend
+    return arrayFriend;
 }
