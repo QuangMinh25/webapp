@@ -13,21 +13,28 @@
 		}
 	</style>
 </head>
+<style>
+	body {
+	  background-image: url('/public/image/login.jpg');
+	}
+	</style>
 <body>
+	
 	<div>
 		<img class="image-logo" src="/public/form/logo.png" alt="logo">
 	</div>
 	<div class="body-dang-ky">
 		<div class="box-dang-ky">
-			<h2 class="title-form">ĐĂNG NHẬP</h2>
+			<h2 class="title-form">ĐĂNG NHẬP </h2>
 			<form class="form-1 formdangnhap2" id="formdangnhap2" method="POST" action="/user/dangnhap">
 				<div class="box-1 name">
-					<label class="text-lable">Nhập gmail</label>
+					<label class="text-lable">Nhập gmail &#128231;</label>
 					<input id="input_name" class="input-text" type="text" placeholder="example**@gmail.com" name="userGmail" autofocus>
 					<span id="thongbaoloi1" style="color: red"></span>
 				</div>
+				
 				<div class="box-1 password">
-					<label class="text-lable">Nhập mật khẩu</label>
+					<label class="text-lable">Nhập mật khẩu &#128272;</label>
 					<input class="input-text" type="password" placeholder="Nhập mật khẩu" name="userPass">
 				</div>
 				<div class="button-submit">
@@ -40,6 +47,10 @@
 				<div class="addinfor">
 					<a href="/user/dangky" class="yeuCauDangKyTaiKhoan">Bạn chưa có tài khoản?</a>
 					<a href="/user/recoverypassword" class="yeuCauDangKyTaiKhoan">Quên mật khẩu?</a>
+				</div>
+				<br>
+				<div>
+					<img src="/public/image/gif1.gif" alt="Computer man" style="width:350px;height:120px;">
 				</div>
 			</form>
 		</div>
