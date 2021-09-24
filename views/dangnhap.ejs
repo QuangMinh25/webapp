@@ -6,6 +6,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="/public/form/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		.addinfor{
 			margin-top: 10px;
@@ -14,31 +15,30 @@
 		}
 	</style>
 </head>
-<style>
-	body {
-	  background-image: url('/public/image/home3.jpeg');
-	}
-	</style>
 	
 <body>
-	
-		<nav>
-			<div class="brand">
-				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-					Đăng Nhập
-				  </button>
-			</div>
+	<div class="wrapper">
+		<nav class="navbar">
+			<img class="logo" src="/public/image/gif3.gif">
 			<ul>
-				<li><a href=""><i class="fa fa-home" aria-hidden="true"></i> <b>Trang Chủ</b></a></li>
-				<li><a href=""><i class="fa fa-info" aria-hidden="true"></i> <b>Về Chúng Tôi</b></a></li>
-				<li><a href=""><i class="fa fa-truck" aria-hidden="true"></i> <b>Dịch Vụ</b></a></li>
-				<li><a href=""><i class="fa fa-telegram" aria-hidden="true"></i> <b>Thông Tin</b></a></li>
-				<li><a href=""><i class="fa fa-location-arrow" aria-hidden="true"></i> <b>Địa Chỉ</b></a></li>
+				<li><a class="active" href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Feedback</a></li>
 			</ul>
-			
 		</nav>
-		
+		<div class="center">
+		<h1>Welcome To Private Chat <i class="fa fa-cloud" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+			<i class="fa fa-cloud" style="font-size:60px;color:crimson;text-shadow:2px 2px 4px #000000;"></i>
+			<i class="fa fa-cloud" style="font-size:60px;color:darkturquoise;text-shadow:2px 2px 4px #000000;"></i>
+		</h1>
+		<div class="buttons">
+		<button type="button" data-toggle="modal" data-target="#myModal">Login</button>
+		<button class="btn2">Sign Up</button>
 	
+	</div>
+</div>	
 	
 	
 	  <!-- The Modal -->
@@ -51,7 +51,7 @@
 			<!-- Modal body -->
 			<div class="modal-body">
 				<div>
-					<img class="image-logo" src="/public/form/logo1.gif" alt="logo">
+					<img class="image-logo" src="/public/image/gif3.gif" alt="logo">
 				</div>
 				<div class="body-dang-ky">
 					<div class="box-dang-ky">
@@ -98,8 +98,7 @@
 	  </div>
 	  
 	</div>
-	
-	
+
 	
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
