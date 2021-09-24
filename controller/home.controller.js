@@ -49,6 +49,7 @@ module.exports.updateFriend = async function (req, res) {
         userFriend.information = user.information.filter(item => item.idFriend !== idUser);
 
         // Tạo db lưu lại nội dung chat
+        
         // Tạo một document lưu lại thông tin A và B chát với nhau
         var elementMess = {
             id1: idUser,

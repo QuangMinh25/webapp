@@ -12,8 +12,8 @@ module.exports.luuDuLieu = async function (req, res) {
             error: "Phát hiện nghi vấn hack!"
         });
         return;
-    }
-    ;
+    };
+    
 
     var newUser = {
         username: req.body.username,
