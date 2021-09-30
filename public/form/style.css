@@ -7,7 +7,7 @@
 	background: url(/public/image/bg3.jpg) no-repeat;
 	background-size: cover;
 	height: 100vh;
-	width: 220vh;
+	width: 222vh;
 	
 }
 .navbar{
@@ -84,9 +84,12 @@
 	border: 1px solid #cc0000;
 	border-radius: 25px;
 	transition: .4s;
+	color: #f1f1f1;;
 }
 .buttons .btn2{
+	
 	margin-left: 25px;
+	
 }
 .buttons button:hover{
 	background: #cc0000;
