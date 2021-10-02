@@ -8,17 +8,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body {
-          background-image: url('/public/image/bg3.jpg');
-          background-repeat: no-repeat;
-         
+
+            background-image: url('/public/image/login1.jpg');
+            background-repeat: no-repeat;
+            width: 800px;;
+            
         }
       </style>
 </head>
 <body>
+   
     <br>
+    <br>
+    <br>
+    
+
 <div>
     <img class="image-logo" src="/public/form/logo.png" alt="logo">
 </div>
+
+
+
 <div class="body-dang-ky">
     <div class="box-dang-ky">
         <h2 class="title-form">ĐĂNG KÝ</h2>
@@ -40,11 +50,12 @@
                 <input class="input-text pass1" type="password" placeholder="********" name="userpass1">
                 <span class="inforRetypePass1" style="color: red"></span>
             </div>
-            <div class="box-1 password">
+          <div class="box-1 password">
                 <label class="text-lable">Nhập lại mật khẩu</label>
                 <input class="input-text pass2" type="password" placeholder="********" name="userpass2">
                 <span class="inforRetypePass2" style="color: red"></span>
             </div>
+            
             <div class="button-submit">
                 <div>
                     <input type="checkbox" id="agree-check" name="xacnhandieukhoan" value="">
@@ -54,12 +65,15 @@
             </div>
             <span><a href="/user/dangnhap">Tôi đã có tài khoản!</a></span>
         </form>
-    </div>
+        
+        
+  
     <% if(error){ %>
         <p style="color:#fff; display: block; background: red; height: 50px; text-align: center; line-height:50px; border-radius: 2px "><%= error %></p>
     <% } %>
 
 </div>
+    
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

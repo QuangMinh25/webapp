@@ -1,5 +1,7 @@
 var User = require("../model/user.model");
 var Friend = require("../model/friend.model");
+const { route } = require("../routers/home.router");
+const router = require("../routers/home.router");
 
 module.exports.home = async function (req, res) {
     var idUser = res.locals.idUser;
@@ -20,16 +22,20 @@ module.exports.homeUpdate = async function (req, res) {
 //Cap nhat thong tin nguoi dung
 module.exports.postHomeUpdate = async function (req, res) {
     var name = req.body.username;
+    var password = req.body.userpass1;
     var idUser = res.locals.idUser;
     var user = await User.findOne({_id: idUser});
     if (name !== "") {
         user.username = req.body.username;
     }
-    ;
+    
     if (req.file) {
         user.avatar = "/uploads/" + req.file.filename;
     }
-    ;
+    
+    if (password !== "") {
+        user.password = req.body.userpass1;
+    }
     user.save();
     res.redirect("/home");
 }

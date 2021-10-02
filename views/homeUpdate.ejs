@@ -25,6 +25,7 @@
       var userName = user.username;
       var userGmail = user.gmail;
       var urlLink = "/public" + user.avatar;
+      var password = user.password;
        %>
     <img class="image-logo" src=<%=urlLink %> alt="logo">
   </div>
@@ -47,7 +48,7 @@
         </div>
         <div class="box-1 password ">
           <label class="text-lable">Thay đổi mật khẩu</label>
-          <input class="input-text pass1" type="password" placeholder="Nhập mật khẩu mới" name="password">
+          <input class="input-text pass1" type="password" placeholder="Nhập mật khẩu mới" value="<%=password%>" name="password">
           <span class="inforRetypePass1" style="color: red"></span>
         </div>
         <div class="box-1 avatar ">

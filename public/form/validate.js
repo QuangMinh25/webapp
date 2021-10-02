@@ -173,4 +173,7 @@ function getThongBaoLoi (){
 	};  
 	xhr.open('POST', url);  // Mở cổng yêu cầu GET đến url khai báo từ trước
 	xhr.send(); // Gởi yêu cầu đến url
+
+	//sign up
+	
 }

@@ -1,5 +1,6 @@
 const express = require('express')
 const connectDB = require('./config/db')
+const methodOverride = require('method-override')
 const app = express()
 app.use(express.json())
 //emoji
