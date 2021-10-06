@@ -1,10 +1,9 @@
 const express = require('express')
 const connectDB = require('./config/db')
-const methodOverride = require('method-override')
 const app = express()
 app.use(express.json())
 //emoji
-     
+
 //////////////////////////////////
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -32,6 +31,8 @@ app.use("/user", userRouter);
 
 var apiRouter = require("./api/home.api");
 app.use("/api", validateAuth, apiRouter);
+
+//admin
 
 //ket noi database
 connectDB()

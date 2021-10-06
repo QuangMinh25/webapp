@@ -22,7 +22,7 @@ module.exports.homeUpdate = async function (req, res) {
 //Cap nhat thong tin nguoi dung
 module.exports.postHomeUpdate = async function (req, res) {
     var name = req.body.username;
-    var password = req.body.userpass1;
+    // var pass = req.body.password;
     var idUser = res.locals.idUser;
     var user = await User.findOne({_id: idUser});
     if (name !== "") {
@@ -32,10 +32,9 @@ module.exports.postHomeUpdate = async function (req, res) {
     if (req.file) {
         user.avatar = "/uploads/" + req.file.filename;
     }
-    
-    if (password !== "") {
-        user.password = req.body.userpass1;
-    }
+    // if (pass !== "") {
+    //     user.password = req.body.password;
+    // }
     user.save();
     res.redirect("/home");
 }

@@ -1,5 +1,6 @@
 var User = require("../model/user.model");
 var md5 = require('md5');
+const router = require("../routers/home.router");
 
 module.exports.dangky = function (req, res) {
     res.render("./dangky", {error: ""});
@@ -27,7 +28,7 @@ module.exports.luuDuLieu = async function (req, res) {
     //     res.json("Email bạn đã có người sử dụng rồi! Vui lòng sử dụng email khác hoặc sử dụng tính năng quên mật khẩu để đăng nhập.");
     //     return;
     // } else {
-    //
+    
     // }
     //KIỂM TRA EMAIL TRÙNG LẶP
     User.create(newUser);
@@ -65,9 +66,25 @@ module.exports.postDangnhap = async function (req, res) {
 }
 
 module.exports.recoveryPass = async function (req, res) {
-    //
-    res.send("Hiện tại chưa thêm chức năng này!");
+    User.find({}, function(err, users) {
+        res.render('admin', {
+            userList: users
+        })
+    })
+   
 }
+// app.get('/recoverypassword', (req, res) => {
+   
+// })
+// app.get('./recoverypassword', async (req, res)=>{
+//     var userID = await User.find();
+//     res.render("admin", {
+//         user: username
+
+//     });
+    
+// })
+
 
 // ------------------
 // module check
