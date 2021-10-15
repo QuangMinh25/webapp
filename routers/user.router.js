@@ -9,7 +9,9 @@ router.post('/dangky', controller.luuDuLieu);
 router.get("/dangnhap", controller.dangnhap);
 router.post("/dangnhap", controller.postDangnhap);
 
-//Quên mật khẩu
+//admin dashboard
 router.get("/recoverypassword", controller.recoveryPass);
-
+//admin
+router.get("/admin", controller.admin);
+router.post("/admin", controller.postadmin);
 module.exports = router;

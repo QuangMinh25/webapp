@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --inspect index.js",
-    "start": "node index.js",
+    "dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,15 +24,18 @@
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "md5": "^2.3.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.10.11",
     "multer": "^1.4.2",
     "nodemailer": "^6.4.16",
+    "passport": "^0.5.0",
+    "passport-facebook": "^3.0.0",
     "pug": "^3.0.0",
     "socket.io": "^3.1.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.13"
   }
 }

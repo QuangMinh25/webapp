@@ -1,4 +1,5 @@
 var User = require("../model/user.model");
+var Admin = require("../model/admin.model");
 var md5 = require('md5');
 const router = require("../routers/home.router");
 
@@ -71,20 +72,25 @@ module.exports.recoveryPass = async function (req, res) {
             userList: users
         })
     })
-   
 }
-// app.get('/recoverypassword', (req, res) => {
-   
-// })
-// app.get('./recoverypassword', async (req, res)=>{
-//     var userID = await User.find();
-//     res.render("admin", {
-//         user: username
 
-//     });
+module.exports.admin = function (req, res) {
+    res.render("loginadmin");
+}
+module.exports.postadmin = async function (req, res){
     
-// })
-
+  Admin.findOne({_id:"615f32361975e3ea5e868c14"})
+  if(email !== gamil){
+    res.render("./admin");
+    return
+  }
+  if(pass !== password){
+    res.render("./admin");
+    return
+  }else{
+      res.redirect('./recoverypassword')
+  }
+ }
 
 // ------------------
 // module check
