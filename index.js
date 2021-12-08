@@ -135,7 +135,7 @@ connectDB()
 var port = process.env.PORT || 3000;
 // const PORT = process.env.PORT;
 //ket noi server socketio va database
-server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:8080`))
+server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:3000`))
 
 var User = require("./model/user.model");
 var Friend = require("./model/friend.model");

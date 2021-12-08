@@ -64,7 +64,7 @@ module.exports.postDangnhap = async function (req, res) {
     }
     ;
     res.cookie("cookieAuth", userID._id)
-    res.redirect("http://localhost:3000/home");
+    res.redirect("https://zalochat-nodejs1.herokuapp.com/home");
 }
 
 module.exports.recoveryPass = async function (req, res) {
