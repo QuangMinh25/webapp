@@ -26,6 +26,12 @@
                 <td><%= user.gmail %></td>
                 <td><%= user.password %></td>
                 <td><%= user.username %></td>
+                <td>
+                  <form action="/" id="delete" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" name="_id" value="<%= user._id %>"/>
+                     <a class="btn btn-success delete">Delete</a>
+                  </form>
+                </td>
             </tr>
         <%})%>
         </tbody>

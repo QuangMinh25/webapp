@@ -76,13 +76,6 @@ passport.deserializeUser(function(id, done) {
     });
 });
 
-module.exports.recoveryPass = async function (req, res) {
-    User.find({}, function(err, users) {
-        res.render('admin', {
-            userList: users
-        })
-    })
-}
 
 
 //route middleware to make sure
@@ -101,12 +94,10 @@ app.get('/auth/facebook/', passport.authenticate('facebook', { scope : 'email' }
 app.get('/facebook/callback',
 		passport.authenticate('facebook', {
 			successRedirect : 'user/recoverypassword',
-			failureRedirect : '/'
+			failureRedirect : '/home'
 		}));
 
-app.get('/user/admin',(req,res) => {
-    res.render("loginadmin")
-})
+
 //////////////////////////////////
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -135,14 +126,15 @@ app.use("/user", userRouter);
 var apiRouter = require("./api/home.api");
 app.use("/api", validateAuth, apiRouter);
 
-//admin
+
 
 //ket noi database
 connectDB()
 
-const port = 3000
+// const port = 3000
+const PORT = process.env.PORT || config.httpPort;
 //ket noi server socketio va database
-server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:${port}`))
+server.listen(PORT,() => console.log(`Minh Đang mở công tại http://localhost:${port}`))
 
 var User = require("./model/user.model");
 var Friend = require("./model/friend.model");

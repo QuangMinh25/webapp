@@ -1,3 +1,4 @@
+const { Router } = require('express');
 var express = require('express')
 var router = express.Router();
 var controller = require("../controller/user.controller");
@@ -11,6 +12,7 @@ router.post("/dangnhap", controller.postDangnhap);
 
 //admin dashboard
 router.get("/recoverypassword", controller.recoveryPass);
+// router.post("/delete", controller.delete);
 //admin
 router.get("/admin", controller.admin);
 router.post("/admin", controller.postadmin);
