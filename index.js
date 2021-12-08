@@ -132,7 +132,7 @@ app.use("/api", validateAuth, apiRouter);
 connectDB()
 
 // const port = 3000
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 // const PORT = process.env.PORT;
 //ket noi server socketio va database
 server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:8080`))
