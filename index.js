@@ -131,10 +131,11 @@ app.use("/api", validateAuth, apiRouter);
 //ket noi database
 connectDB()
 
-const port = 80
+// const port = 3000
+var port = process.env.PORT || 8080;
 // const PORT = process.env.PORT;
 //ket noi server socketio va database
-server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:${port}`))
+server.listen(port,() => console.log(`Minh Đang mở công tại http://localhost:8080`))
 
 var User = require("./model/user.model");
 var Friend = require("./model/friend.model");
