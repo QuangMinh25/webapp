@@ -16,7 +16,7 @@ passport.use(new facebookStrategy({
     // pull in our app id and secret from our auth.js file
     clientID        : "205705758326305",
     clientSecret    : "6263a8cff805791f8e802c7a0502915e",
-    callbackURL     : "https://zalochat-nodejs.herokuapp.com/callback",
+    callbackURL     : "https://zalochat-nodejs.herokuapp.com/facebook/callback",
     profileFields: ['id', 'displayName', 'name', 'gender', 'picture.type(large)','email']
 
 },// facebook will send back the token and profile
