@@ -220,7 +220,7 @@ function idToObjectUser(idUser) { //Truyen vao mot id user > Tra ve object cua u
 }
 
 
-var socket = io("http://localhost:3000/");
+var socket = io("https://zalochat-nodejs1.herokuapp.com/");
 socket.emit("Gui-id-user-len-server", accountID);
 socket.on("server-gui-tin-nhan-friend-ve-client", function (contentMess) {
     var noiDungChatElement = $("#idnoidungchat");
