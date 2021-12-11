@@ -1,4 +1,4 @@
-var url = "http://localhost:3000/api/users";
+var url = "https://zalochat-nodejs1.herokuapp.com/api/users";
 var xhr = new XMLHttpRequest();
 var giaTriTraVe;
 
@@ -175,7 +175,7 @@ function ajaxData(idfriend, status) { //Hàm này dùng để gửi ajax data v�
     // idfriend, status
     // {idFriend: idfriend, status:status}
     var valueAjax = JSON.stringify({idFriend: idfriend, status: status})
-    xhr2.open('POST', "http://localhost:3000/home/updatefriend");
+    xhr2.open('POST', "https://zalochat-nodejs1.herokuapp.com/home/updatefriend");
     xhr2.setRequestHeader("Content-type", "application/json"); //Chọn kiểu dữ liệu cần gửi
     xhr2.send(valueAjax);
 }
